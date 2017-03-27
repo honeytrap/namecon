@@ -6,9 +6,9 @@ Namecon is a simple library which provides a base for generating predefined name
 Concept
 -------
 
-Namecon is rather simple, you create a structure which implements the rules you desire for the giving standard to be used for the template provided and then use that to generate namers which will create new based based on a provided base.
+Namecon is rather simple, you create a structure which implements the rules you desire for the giving standard to be used for the template provided and then use that to generate namers which will create new names based based on a provided base.
 
-This concept is very simple but can grow into a power system which streamlines how you name instances, daemons, running apps.
+This concept is very simple but can grow into a power system which streamlines how you name instances, daemons, running apps, ...etc.
 
 Example
 -------
@@ -20,7 +20,7 @@ import (
 
 func main() {
 
-	// Create the name generator with the base template and NameGenerator rule enforner.
+	// Create the name generator with the base template and NameGenerator rule enforcer.
 	simpleNamer := namecon.GenerateNamer(namecon.SimpleNamer{}, "app-%s:%s")
 
 	// create a new name based on a specifc group/app/subdomain.
