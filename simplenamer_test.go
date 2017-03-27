@@ -1,7 +1,6 @@
 package namecon_test
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/honeytrap/namecon"
@@ -14,8 +13,6 @@ func TestSimpleNamer(t *testing.T) {
 
 	firstName := namer("Trappa")
 	secondName := namer("Honey")
-
-	fmt.Printf("First: %q -> %q ", firstName, secondName)
 
 	if firstName == secondName {
 		t.Fatalf("Should have successfully generated new unique generation names")
