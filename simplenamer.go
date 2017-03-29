@@ -30,6 +30,17 @@ func (s SimpleNamer) Generate(template string, base string) string {
 
 //================================================================================
 
+// Basic defines a struct which implements the NameGenerator interface and generates
+// a giving name based on the template and a giving set of directives.
+type Basic struct{}
+
+// Generate returns a new name based on the provided arguments.
+func (Basic) Generate(template string, base string) string {
+	return fmt.Sprintf(template, base)
+}
+
+//================================================================================
+
 // LimitedNamer defines a struct which implements the NameGenerator interface and generates
 // a giving name based on the template and a giving set of directives.
 type LimitedNamer struct {
